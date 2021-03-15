@@ -46,23 +46,23 @@ class ContactsForm extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit} className={s.contactsForm}>
-        <label htmlFor={this.nameInputId} className={s.formLabel}>
+        <label htmlFor={shortid.generate()} className={s.formLabel}>
           Name
         </label>
         <input
           className={s.formLabel}
-          id={this.nameInputId}
+          id={shortid.generate()}
           type="text"
           name="name"
           value={this.state.name}
           onChange={this.handleChange}
         />
-        <label htmlFor={this.nameInputId} className={s.formLabel}>
+        <label htmlFor={shortid.generate()} className={s.formLabel}>
           Number
         </label>
         <input
           className={s.formLabel}
-          id={this.nameInputId}
+          id={shortid.generate()}
           type="tel"
           name="number"
           value={this.state.number}
